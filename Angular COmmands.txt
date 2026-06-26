@@ -1,0 +1,126 @@
+1: ng new todo
+
+2: ng serve
+
+3: ng lint  : check code for coding standard
+
+4: ng build : 
+
+5: ng test : to run unit test 
+
+6: ng e2e
+
+
+Component
+
+1: template (.html)
+2: css (.css)
+3: code (.ts)
+
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'todo Welcome To This Application';
+  message = "This is simple message"
+}
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet],
+  template: '<h1>{{title}} --- {{message}}</h1>',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Welcome To This Application';
+  message = "This is simple message"
+}
+
+👉using --skip-import --standalone while creating component
+
+use --skip-import --standalone options when executing the command as shown below:
+
+ng generate component welcome --skip-import --standalone
+
+
+
+👉 WHY?
+Remember that this is a standalone application (not using NgModules). Therefore, you’ll need to add the extra flags --skip-import and --standalone in the CLI command.
+
+
+
+puneethsai@Puneeths-MacBook-Pro todo % ng g c welcome --skip-import --standalone
+Creating new component spec named: welcome
+CREATE src/app/welcome/welcome.component.css (0 bytes)
+CREATE src/app/welcome/welcome.component.html (22 bytes)
+CREATE src/app/welcome/welcome.component.ts (203 bytes)
+CREATE src/app/welcome/welcome.component.spec.ts (160 bytes)
+
+
+👉 CHANGE 2: WHAT SHOULD YOU DO?
+In order to render WelcomeComponent, we need to import in app.component.ts [CODE CHANGE SHOWN BELOW]
+
+
+
+import { Component } from '@angular/core';
+
+import { RouterOutlet } from '@angular/router';
+
+import { WelcomeComponent } from './welcome/welcome.component'; // Imported
+
+
+
+@Component({
+
+selector: 'app-root',
+
+standalone: true, // newly added
+
+imports: [
+
+RouterOutlet,
+
+WelcomeComponent, // Imported
+
+],
+
+templateUrl: './app.component.html',
+
+styleUrl: './app.component.css'
+
+})
+
+export class AppComponent {
+
+title = 'todo';
+
+}
+
+--> after generating component using ng generate component welcome --skip-import --standalone  
+update app.components.ts
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet , WelcomeComponent],
+  //template: '<h1>{{title}} --- {{message}}</h1>',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'Welcome To This Application';
+  message = "This is simple message"
+}
