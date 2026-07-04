@@ -1,0 +1,71 @@
+<div class="container py-4">
+  <div class="card border-0 shadow-sm rounded-3">
+    <div class="card-header bg-white border-bottom">
+      <div class="d-flex justify-content-between align-items-center">
+        <h4 class="mb-0 fw-semibold text-dark">
+          Todo List
+        </h4>
+        <span class="badge bg-dark">
+          {{todos.length}} Tasks
+        </span>
+      </div>
+    </div>
+
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th width="80">#</th>
+              <th>Description</th>
+              <th width="220">Target Date</th>
+              <th width="180" class="text-center">Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            @for (todo of todos; track todo.todo_id) {
+              <tr>
+                <td class="fw-semibold">
+                  {{todo.todo_id}}
+                </td>
+
+                <td class="text-uppercase">
+                  {{todo.description}}
+                </td>
+
+                <td>
+                  {{todo.target_date | date:'MMM d, y'}}
+                </td>
+
+                <td class="text-center">
+                  @if(todo.done){
+                    <span class="badge rounded-pill bg-success px-3 py-2">
+                      Completed
+                    </span>
+                  } @else {
+                    <span class="badge rounded-pill bg-secondary px-3 py-2">
+                      Pending
+                    </span>
+                  }
+                </td>
+              </tr>
+            }
+
+            @if(todos.length === 0){
+              <tr>
+                <td colspan="4" class="text-center py-5 text-muted">
+                  No todos found.
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-top text-muted small">
+      Total Records : {{todos.length}}
+    </div>
+  </div>
+</div>
