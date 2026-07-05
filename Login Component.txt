@@ -1,0 +1,33 @@
+ng generate component login --skip-import --standalone
+
+import { LoginComponent } from './login/login.component'; // Import this
+
+
+@Component({
+
+selector: 'app-root',
+
+standalone: true,
+
+imports: [
+
+RouterOutlet,
+
+WelcomeComponent,
+
+LoginComponent, // Import this
+
+],
+
+templateUrl: './app.component.html',
+
+styleUrl: './app.component.css'
+
+})
+
+export class AppComponent {
+
+title = 'todo';
+
+}
+

@@ -124,3 +124,26 @@ export class AppComponent {
   title = 'Welcome To This Application';
   message = "This is simple message"
 }
+
+
+
+ng generate service ServiceName
+
+
+
+old code for login
+
+if (this.username === "admin" && this.password === "123") {
+      this.invalidCredentials = false;
+      alert("Login Successful");
+      this.router.navigate(['welcome', this.username]);
+
+    } else {
+      this.invalidCredentials = true;
+    }
+
+
+
+
+
+ng generate component logout --skip-import --standalone
