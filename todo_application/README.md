@@ -1,59 +1,33 @@
-# TodoApplication
+# 🚀 Angular Learning Journey
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.17.
+Welcome to my repository! This is a dedicated space where I document my journey of mastering the **Angular** framework. As a Senior Web Developer with a deep passion for continuous learning, I believe in staying ahead of industry trends by exploring diverse programming languages and frameworks. 
 
-## Development server
+I use this repository to experiment, build, and refine my skills, transitioning my backend expertise into robust frontend architectures.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 👨‍💻 About Me
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+I am **Gaurav Somdatta Kulkarni**, a Senior Web Developer at Satmat Technologies with extensive experience in designing scalable web applications and high-performance APIs. 
 
-## Code scaffolding
+**My technical foundation includes:**
+* **Backend Expertise:** Laravel, CodeIgniter, PHP, and Spring Boot
+* **Cloud & Infrastructure:** AWS (S3, IAM, DynamoDB)
+* **Front-End & UI:** HTML5, CSS3, JavaScript, Bootstrap, and now **Angular**
+* **Philosophy:** I am deeply committed to continuous learning and adaptability, always expanding my skill set to build innovative, secure, and data-driven solutions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+📫 **Connect with me:** [LinkedIn Profile](https://www.linkedin.com/in/gauravsomdattakulkarni/)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🗺️ Learning Roadmap
 
-```bash
-ng generate --help
-```
+My approach to learning is hands-on. In this repository, I document:
 
-## Building
+- [x] **Project Implementations:** Building real-world applications to master component-based architecture.
+- [ ] **Core Angular Concepts:** From data binding and directives to dependency injection and RxJS.
+- [ ] **Architecture Design:** Applying my experience in scalable system design to Angular applications.
+- [ ] **Integration:** Connecting frontend interfaces with RESTful APIs, leveraging the same principles I use in my professional backend development.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+Created by Gaurav Somdatta Kulkarni | Senior Web Developer
