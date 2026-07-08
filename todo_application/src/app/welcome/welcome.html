@@ -11,10 +11,30 @@
   <button class="btn btn-success" (click)="getWelcomeMessage()">
     Get Welcome Message
   </button>
+
+</div>
+
+<br>
+
+<div class="container">
+  Click Here to get custommizes welcome message With Parameter
+  <input type="user_name" [(ngModel)]="user_name" id="user_name" name="user_name" placeholder="Enter your name" class="my-2 form-control" />
+
+  <br>
+
+  <button class="btn btn-info" (click)="getWelcomeMessageWithParameter()">
+    Get Welcome Message With Parameter
+  </button>
+
+
   @if(messageWelcome){
    <h2>{{messageWelcome}}</h2>
   }
   @if(errorMessage){
     <h3 class="text-danger">{{errorMessage}}</h3>
   }
+
 </div>
+
+
+

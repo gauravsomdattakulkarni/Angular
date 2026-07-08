@@ -22,4 +22,8 @@ export class WelcomeData {
    //this.http.get('http://localhost:8081/hello-world-bean').subscribe();
   //console.log("Welcome Message From Service Welcome Datas get welcome message function");
   }
+
+  getWelcomeMessageWithParameter(name: string) {
+    return this.http.get<WelcomeDataResponse>(`http://localhost:8081/hello-world-path-variable/${name}`);
+  }
 }
