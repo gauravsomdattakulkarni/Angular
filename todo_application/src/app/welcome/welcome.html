@@ -6,3 +6,15 @@
 <a routerLink="/todos">GO TO TO DO LIST</a>
 </div>
 
+<div class="container">
+  Click Here to get custommizes welcome message
+  <button class="btn btn-success" (click)="getWelcomeMessage()">
+    Get Welcome Message
+  </button>
+  @if(messageWelcome){
+   <h2>{{messageWelcome}}</h2>
+  }
+  @if(errorMessage){
+    <h3 class="text-danger">{{errorMessage}}</h3>
+  }
+</div>

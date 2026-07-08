@@ -1,33 +1,101 @@
-# 🚀 Angular Learning Journey
+# Angular Todo Application
 
-Welcome to my repository! This is a dedicated space where I document my journey of mastering the **Angular** framework. As a Senior Web Developer with a deep passion for continuous learning, I believe in staying ahead of industry trends by exploring diverse programming languages and frameworks. 
+This project was generated using the Angular CLI.
 
-I use this repository to experiment, build, and refine my skills, transitioning my backend expertise into robust frontend architectures.
+## Development Server
 
----
+Start the development server:
 
-## 👨‍💻 About Me
+```bash
+ng serve
+```
 
-I am **Gaurav Somdatta Kulkarni**, a Senior Web Developer at Satmat Technologies with extensive experience in designing scalable web applications and high-performance APIs. 
+Open your browser and navigate to:
 
-**My technical foundation includes:**
-* **Backend Expertise:** Laravel, CodeIgniter, PHP, and Spring Boot
-* **Cloud & Infrastructure:** AWS (S3, IAM, DynamoDB)
-* **Front-End & UI:** HTML5, CSS3, JavaScript, Bootstrap, and now **Angular**
-* **Philosophy:** I am deeply committed to continuous learning and adaptability, always expanding my skill set to build innovative, secure, and data-driven solutions.
+```
+http://localhost:4200/
+```
 
-📫 **Connect with me:** [LinkedIn Profile](https://www.linkedin.com/in/gauravsomdattakulkarni/)
+The application will automatically reload whenever you modify any of the source files.
 
----
+## Code Scaffolding
 
-## 🗺️ Learning Roadmap
+Generate a new component:
 
-My approach to learning is hands-on. In this repository, I document:
+```bash
+ng generate component component-name
+```
 
-- [x] **Project Implementations:** Building real-world applications to master component-based architecture.
-- [ ] **Core Angular Concepts:** From data binding and directives to dependency injection and RxJS.
-- [ ] **Architecture Design:** Applying my experience in scalable system design to Angular applications.
-- [ ] **Integration:** Connecting frontend interfaces with RESTful APIs, leveraging the same principles I use in my professional backend development.
+Generate other Angular artifacts:
 
----
-Created by Gaurav Somdatta Kulkarni | Senior Web Developer
+```bash
+ng generate directive directive-name
+ng generate pipe pipe-name
+ng generate service service-name
+ng generate class class-name
+ng generate guard guard-name
+ng generate interface interface-name
+ng generate enum enum-name
+```
+
+To see all available schematics:
+
+```bash
+ng generate --help
+```
+
+## Build
+
+Build the project:
+
+```bash
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## Running Unit Tests
+
+Execute unit tests using Karma:
+
+```bash
+ng test
+```
+
+## Running End-to-End Tests
+
+Angular does not include an end-to-end testing framework by default.
+
+You can add one of the following:
+
+- Cypress
+- Playwright
+- Selenium
+
+## Project Structure
+
+```
+src/
+├── app/
+├── assets/
+├── environments/
+├── index.html
+├── main.ts
+└── styles.css
+
+angular.json
+package.json
+tsconfig.json
+README.md
+```
+
+## Additional Resources
+
+- Angular Documentation: https://angular.dev
+- Angular CLI Documentation: https://angular.dev/tools/cli
+- TypeScript Documentation: https://www.typescriptlang.org/
+- RxJS Documentation: https://rxjs.dev/
+
+## License
+
+This project is licensed under the MIT License.
