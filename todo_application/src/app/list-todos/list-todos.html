@@ -24,10 +24,10 @@
           </thead>
 
           <tbody>
-            @for (todo of todos; track todo.todo_id) {
+            @for (todo of todos; track todo.todoId) {
               <tr>
                 <td class="fw-semibold">
-                  {{todo.todo_id}}
+                  {{todo.todoId}}
                 </td>
 
                 <td class="text-uppercase">
@@ -35,7 +35,7 @@
                 </td>
 
                 <td>
-                  {{todo.target_date | date:'MMM d, y'}}
+                  {{todo.targetDate | date:'MMM d, y'}}
                 </td>
 
                 <td class="text-center">
