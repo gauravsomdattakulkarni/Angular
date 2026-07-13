@@ -20,14 +20,15 @@
               <th>Description</th>
               <th width="220">Target Date</th>
               <th width="180" class="text-center">Status</th>
+              <th>Action</th>
             </tr>
           </thead>
 
           <tbody>
-            @for (todo of todos; track todo.todoId) {
+            @for (todo of todos; track todo.todoId; let i = $index) {
               <tr>
                 <td class="fw-semibold">
-                  {{todo.todoId}}
+                  {{i + 1}}
                 </td>
 
                 <td class="text-uppercase">
@@ -48,6 +49,10 @@
                       Pending
                     </span>
                   }
+                </td>
+                <td>
+                  <button class="btn btn-outline-secondary btn-sm m-1" (click)="editTodo(todo.todoId)">Edit Todo</button>
+                  <button class="btn btn-danger btn-sm m-1" (click)="deleteTodo(todo.todoId)">Delete Todo</button>
                 </td>
               </tr>
             }

@@ -16,4 +16,11 @@ export class TodoData {
       return this.http.get<Todo[]>(`http://localhost:8081/users/${name}/todos`);
   }
 
+  deleteTodo(name: string, todoId: number) {
+    return this.http.delete(`http://localhost:8081/users/${name}/todos/${todoId}`);
+  }
+
+  getToDoDetails(name: string, todoId: number) {
+    return this.http.get<Todo>(`http://localhost:8081/users/${name}/todos/${todoId}`);
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { DatePipe , UpperCasePipe,LowerCasePipe, NgFor } from '@angular/common';
 import { TodoData } from '../service/data/todo-data';
 
@@ -36,11 +36,11 @@ export class ListTodos implements OnInit {
 
   constructor(
     private todoService: TodoData,
-    private changeDetectorRef: ChangeDetectorRef
+    private changeDetectorRef: ChangeDetectorRef,
+    private router: Router
   ) {}
 
-  ngOnInit() {
-    console.log('Component initialized');
+  getTodos(){
     this.todoService.getAllToDos('Gaurav').subscribe({
       next: (response) => {
         this.todos = response;
@@ -48,6 +48,37 @@ export class ListTodos implements OnInit {
         this.changeDetectorRef.detectChanges();
       }
     });
+  }
 
+  ngOnInit() {
+    console.log('Component initialized');
+    this.getTodos();
+
+  }
+
+  deleteTodo(todoId: number) {
+    todoId = Number(todoId);
+    if(confirm(`Are you sure you want to delete the todo with ID: ${todoId}?`)) {
+      console.log("Deleting todo with ID:", todoId);
+      this.todoService.deleteTodo('Gaurav', todoId).subscribe({
+        next: (response) => {
+          console.log('Todo deleted successfully:', response);
+          this.getTodos();
+          alert(`Todo with ID: ${todoId} has been deleted successfully.`);
+        },
+        error: (error) => {
+          console.error('Error deleting todo:', error);
+          alert("Some Issue Occurred while deleting the todo. Please try again later.");
+        }
+      });
+    }else{
+      console.log("Deletion cancelled for todo with ID:", todoId);
+    }
+  }
+
+  editTodo(todoId : Number){
+    //alert("Edit Todo");
+    console.log("Edit Todo Id : " + todoId);
+    this.router.navigate(['todos',todoId]);
   }
 }

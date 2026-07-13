@@ -1,0 +1,21 @@
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="mb-3">TODO</h3>
+            <hr>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="Enter your task" [(ngModel)]="todo[0].description">
+            </div>
+            <div class="mb-3">
+                <label for="targetDate" class="form-label">Target Date</label>
+                <input type="date" class="form-control" id="targetDate" name="targetDate" [(ngModel)]="todo[0].targetDate">
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary w-100" (click)="saveTodo()">Save</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
