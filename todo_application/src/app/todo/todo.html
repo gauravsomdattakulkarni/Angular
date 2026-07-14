@@ -5,11 +5,11 @@
             <hr>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <input type="text" class="form-control" id="description" name="description" placeholder="Enter your task" [(ngModel)]="todo[0].description">
+                <input type="text" [(ngModel)]="todoDetails.description" class="form-control" id="description" name="description" placeholder="Enter your task" >
             </div>
             <div class="mb-3">
                 <label for="targetDate" class="form-label">Target Date</label>
-                <input type="date" class="form-control" id="targetDate" name="targetDate" [(ngModel)]="todo[0].targetDate">
+                <input type="date" [(ngModel)]="todoDetails.targetDate" class="form-control" id="targetDate" name="targetDate" >
             </div>
             <div>
                 <button type="button" class="btn btn-primary w-100" (click)="saveTodo()">Save</button>
